@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Select and Speak Extension Squared",
+  "description": "Extend the Select and Speak Extension",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["jquery-3.1.0.js", "background.js"]
+    }
+  ]
+}
