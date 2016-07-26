@@ -16,7 +16,7 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["jquery-3.1.0.js", "background.js"]
+      "js": ["jquery-3.1.0.js", "remove-noise.js"]
     }
   ]
 }
