@@ -22,22 +22,4 @@ $(document).ready(function() {
         });
     });
 
-
-    $("p").click(function() {
-        $(".appendedText").each(function() {
-            $(this).remove();
-        });
-
-        var rest = document.createElement('p');
-        $(rest).addClass('appendedText');
-
-        $(this).nextAll().each(function() {
-            $(rest).append($(this).text());
-            $(rest).append(" ");
-        });
-
-        $(this).append($(rest));
-    });
-
 });
-
