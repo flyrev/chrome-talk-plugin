@@ -9,7 +9,10 @@ $(document).ready(function() {
     "figure",
     "#References",
     ".reflist",
-    "header"
+    "header",
+    "#External_links",
+    ".external",
+    ".sistersitebox"
     ];
 
     $.each(removeEverythingMatchingTheseSelectors, function(index, value) {
