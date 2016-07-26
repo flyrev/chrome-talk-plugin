@@ -1,7 +1,9 @@
 $(document).ready(function() {
+
+    var listener = new ParagraphTracker();
+
     var removeEverythingMatchingTheseSelectors = [
     ".entry-origin",
-    ".entry-title",
     ".entry-meta",
     ".toc",
     ".mw-editsection",
@@ -9,7 +11,6 @@ $(document).ready(function() {
     "figure",
     "#References",
     ".reflist",
-    "header",
     "#External_links",
     ".external",
     ".sistersitebox"
@@ -20,4 +21,23 @@ $(document).ready(function() {
             $(this).remove();
         });
     });
+
+
+    $("p").click(function() {
+        $(".appendedText").each(function() {
+            $(this).remove();
+        });
+
+        var rest = document.createElement('p');
+        $(rest).addClass('appendedText');
+
+        $(this).nextAll().each(function() {
+            $(rest).append($(this).text());
+            $(rest).append(" ");
+        });
+
+        $(this).append($(rest));
+    });
+
 });
+
