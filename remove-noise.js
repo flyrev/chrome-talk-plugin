@@ -23,3 +23,10 @@ $(document).ready(function() {
     });
 
 });
+
+function fixOcd() {
+    $("span:contains('Listen to paragraph'):not(:has('*'))").text("Listen from paragraph");
+    window.setTimeout(fixOcd, 10);
+}
+
+fixOcd();
